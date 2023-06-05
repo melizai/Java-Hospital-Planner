@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hospitalplanner.HelloController">
+    <left>
+        <VBox prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #5F7161; -fx-border-color: #fff; -fx-border-width: 0 5 0 0;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/medical-logo-png-909-removebg-preview.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#switchToHome" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Clinica DLSV">
+                            <font>
+                                <Font name="System Bold Italic" size="24.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="400.0" prefWidth="250.0" spacing="30.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#switchToProgramare" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent;" styleClass="selected" stylesheets="@style.css" text="PROGRAMEAZA-TE" underline="true">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent;" stylesheets="@style.css" text=" Cadre Medicale">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/icons8-medical-doctor-50.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <styleClass>
+                                <String fx:value="selected" />
+                                <String fx:value="selected-border" />
+                            </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#informatii" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent;" styleClass="selected" stylesheets="@style.css" text="  Informatii">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/icons8-about-50.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ecf0d4; -fx-border-color: #fff; -fx-border-width: 0 5 0 0;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="150.0" prefWidth="650.0" style="-fx-background-color: #869887; -fx-border-color: #fff; -fx-border-width: 0 0 5 0;">
+                    <children>
+                        <Label styleClass="shadow" stylesheets="@style.css" text="Echipa noastră">
+                            <font>
+                                <Font name="System Bold Italic" size="48.0" />
+                            </font>
+                        </Label>
+                    </children></VBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <ScrollPane fx:id="scroll" prefHeight="450.0" prefWidth="651.0" styleClass="transparent" stylesheets="@style.css">
+                            <content>
+                                <VBox prefHeight="2170.0" prefWidth="630.0" spacing="20.0">
+                                    <children>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor1.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Andrici Marius">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Oftalmologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor2.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Badea Ion">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Oftalmologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor3.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Voicu Violeta">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Oftalmologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor4.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Baran Maria">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Dermatologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor5.jpg" />
+                                                            </image>
+                                                            <cursor>
+                                                                <Cursor fx:constant="NONE" />
+                                                            </cursor>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Coatu Sorin">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Dermatologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor6.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Popov Petrica">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Dermatologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor7.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Ardeleanu Mircea">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Ginecologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor8.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Brojboiu Maria">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Ginecologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor9.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Darie Eleonora">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Ginecologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor10.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Cernat Mihai">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Cardiologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor11.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Pacurar Claudia">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Cardiologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor12.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Simion Emil">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Cardiologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor13.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Costin Ana Maria">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Endocrinologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor14.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Florea Ionel">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Endocrinologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor15.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Lascu Mihaela">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Endocrinologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor16.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Munteanu Toader">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Neurologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor17.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Manea Lucian">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Neurologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor18.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Stanescu Constantin">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Neurologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor19.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Cobzaru Alina">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Pediatrie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor20.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. David Valeriu">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Pediatrie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor21.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Morega Mihaela">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Pediatrie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="250.0" prefWidth="630.0" spacing="10.0" styleClass="shadow" stylesheets="@style.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor22.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Scornea Aurelia">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Pneumologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor23.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Lolea Marius">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Pneumologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #EDF1D6;" stylesheets="@style.css">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                            <image>
+                                                                <Image url="@img/doctor24.jpg" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label styleClass="shadow" text="Dr. Duma Denisa">
+                                                            <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label styleClass="shadow" text="Pneumologie">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="doctor-item" />
+                                                    </styleClass>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </HBox>
+            </children></VBox>
+    </center>
+</BorderPane>
